@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const connectDB=async()=>{
     try{
         //mongodb connection
-        const con = await mongoose.connect(process.env.MONGO_URL,{
+        const con = await mongoose.connect('mongodb+srv://gundetisai90:Reddysai%409090@cluster0.4yg3sa1.mongodb.net/?retryWrites=true&w=majority',{
             useNewUrlParser:true,useUnifiedTopology:true
         })
         console.log(`MongoDB connected : ${con.connection.host}`);
@@ -13,4 +13,4 @@ const connectDB=async()=>{
     }
 }
 
-module.exports = connectDB
+module.exports = connectDB;
